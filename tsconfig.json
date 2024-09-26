@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es5",
+    "sourceMap": false,
+    "importHelpers": false,
+    "allowSyntheticDefaultImports": true,
+    "skipLibCheck": true,
+    "strictNullChecks": false,
+    "types": ["node", "playwright"],
+    "lib": [
+      "ES2021.String",
+      "dom"
+    ]
+  },
+  "exclude": ["node_modules"]
+}

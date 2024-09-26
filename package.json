@@ -1,0 +1,16 @@
+{
+  "name": "automation",
+  "version": "1.0.0",
+  "description": "regression testing",
+  "scripts": {
+    "test": "playwright test"
+  },
+  "author": "OpenWEB Automation Engineer",
+  "license": "ISC",
+  "dependencies": {
+    "@playwright/test": "1.47.2"
+  },
+  "devDependencies": {
+    "eslint": "^8.32.0"
+  }
+}
