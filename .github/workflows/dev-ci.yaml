@@ -44,4 +44,3 @@ jobs:
     secrets: inherit
     with:
       service_name: idt-${{ matrix.service }}
-      app_path: ./apps/${{ matrix.service }}
