@@ -6,6 +6,9 @@ on:
       service_name:
         type: string
         required: true
+      spot:
+        type: string
+        required: true
 jobs:
   build:
     name: Build and push Docker image
@@ -13,4 +16,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print affected services on reusable
-        run: "echo 'Matrix run on reusable: ${{ inputs.service_name }} changed!'"
+        run: "echo 'Matrix run on reusable: ${{ inputs.service_name }}  ${{inputs.spot}} changed!'"

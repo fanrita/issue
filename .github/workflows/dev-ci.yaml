@@ -1,17 +1,7 @@
 name: test
 
 on:
-  workflow_dispatch:
-    inputs:
-      spot:
-        type: string
-        description: 'The spot ID to use for testing'
-        required: true
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
+  push:
     branches:
       - 'main'
 jobs:
@@ -44,3 +34,4 @@ jobs:
     secrets: inherit
     with:
       service_name: idt-${{ matrix.service }}
+      spot: 'auto'
