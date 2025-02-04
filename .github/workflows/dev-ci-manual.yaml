@@ -1,0 +1,24 @@
+name: test
+
+on:
+  workflow_dispatch:
+    inputs:
+      services:
+        type: string
+        description: 'The spot ID to use for testing'
+        required: true
+      spot:
+        type: string
+        description: 'The spot ID to use for testing'
+        required: true
+jobs:
+  build:
+    strategy:
+      fail-fast: false
+      matrix:
+        service: ${{ fromJSON(inputs.services) }}
+    uses: ./.github/workflows/reusable-build.yaml
+    secrets: inherit
+    with:
+      service_name: idt-${{ matrix.service }}
+      spot: inputs.spot
