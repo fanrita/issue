@@ -1,0 +1,16 @@
+name: reusable build
+
+on:
+  workflow_call:
+    inputs:
+      service_name:
+        type: string
+        required: true
+jobs:
+  build:
+    name: Build and push Docker image
+    environment: development
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print affected services on reusable
+        run: "echo 'Matrix run on reusable: ${{ inputs.service_name }} changed!'"
