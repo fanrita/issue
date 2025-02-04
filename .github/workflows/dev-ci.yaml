@@ -31,7 +31,9 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        service: ${{ fromJSON(needs.prebuild.outputs.affectedServices) }}
+        service:
+          - fixtures
+          - tests
     uses: ./.github/workflows/reusable-build.yaml
     needs: prebuild
     secrets: inherit
