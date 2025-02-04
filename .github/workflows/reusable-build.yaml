@@ -11,8 +11,8 @@ on:
         required: true
 jobs:
   build:
-    if contains(fronJson('["tests", "fixtures"]', inputs.service_name))
     name: Build and push Docker image
+    if: (inputs.service_name == 'idt-tests') || (inputs.service_name == 'idt-ixtures')
     environment: development
     runs-on: ubuntu-latest
     steps:

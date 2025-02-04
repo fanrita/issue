@@ -1,12 +1,12 @@
 name: test
 
-on:
-  push:
-    branches:
-      - 'main'
-    paths:
-      - 'fixtures/**'
-      - 'tests/**'
+#on:
+#  push:
+#    branches:
+#      - 'main'
+#    paths:
+#      - 'fixtures/**'
+#      - 'tests/**'
 jobs:
   prebuild:
     runs-on: ubuntu-latest

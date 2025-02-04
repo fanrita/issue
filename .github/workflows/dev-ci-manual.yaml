@@ -5,7 +5,7 @@ on:
     inputs:
       services:
         type: string
-        description: 'Services for testing'
+        description: 'Services for testing: ["tests", "fixtures"]'
         required: true
       spot:
         type: string
