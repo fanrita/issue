@@ -14,7 +14,7 @@ export const test = base.extend<APITestOptions>({
   adminUsers: [],
 
   createUsersWithRole: async ({ adminUsers }, use) => {
-    const createdUsers = [];
+    const createdUsers2 = [];
 
     await use(adminUsers);
   },
